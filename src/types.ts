@@ -7,8 +7,11 @@ export interface User extends Document {
     firstName: string;
     gender: genderEnum;
     lastName: string;
-    password: string;
+    password: string; 
     phoneNumber: string;
+    roles?: string[];
+    createdAt?: Date;
+    updatedAt?: Date;
 }
 
 export interface Post {

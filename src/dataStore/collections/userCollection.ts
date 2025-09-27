@@ -39,8 +39,12 @@ const userSchema = new Schema<User>({
     DOB: {
         type: Date,
         required: true,
+    },
+    roles: {
+        type: [String],
+        default: ['user']
     }
-})
+}, {timestamps: true})
 
 userSchema.index({
     email: 1
